@@ -1,19 +1,53 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {Component} from 'react';
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+export default class App extends Component
+{
+
+    constructor(props)
+    {
+        super(props);
+        this.state = {
+                        isCross: true,
+                        winGame: ""
+                     };
+     };
+
+
+     drawItem = () => {
+       // TODO:
+     };
+
+     chooseIcon = () => {};
+
+     chooseColor = () => {};
+
+     resetGame = () => {};
+
+     chooseWinner = () => {};
+
+
+
+
+
+    render()
+    {
+        return (
+            <View style={styles.container}>
+                <Text>App</Text>
+            </View>
+        );
+    };
+};
+
+
+const styles = StyleSheet.create(
+{
+    container: {
+                flex: 1,
+                backgroundColor: '#fff',
+                alignItems: 'center',
+                justifyContent: 'center',
+                },
 });
