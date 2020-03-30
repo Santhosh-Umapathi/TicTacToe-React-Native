@@ -1,5 +1,5 @@
   import React, { Component } from "react";
-  import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+  import { StyleSheet, Text, View, TouchableOpacity, Alert } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import { Button } from 'native-base';
 
@@ -56,9 +56,10 @@ export default class App extends Component
           winGame: (itemArray[0] ? "Cross" : "Circle").concat(" Wins")
         },
         () => {
-          alert(`${this.state.winGame}`);
-          this.resetGame();
-        }
+          Alert.alert(`${this.state.winGame}`,"", [{
+            text: "Reset",
+            onPress: () => this.resetGame()
+          }]);}
       );
     } else if (
       itemArray[3] !== "empty" &&
@@ -70,8 +71,12 @@ export default class App extends Component
           winGame: (itemArray[3] ? "Cross" : "Circle").concat(" Wins")
         },
         () => {
-          alert(`${this.state.winGame}`);
-          this.resetGame();
+          Alert.alert(`${this.state.winGame}`, "", [
+            {
+              text: "Reset",
+              onPress: () => this.resetGame()
+            }
+          ]);
         }
       );
     } else if (
@@ -84,8 +89,12 @@ export default class App extends Component
           winGame: (itemArray[6] ? "Cross" : "Circle").concat(" Wins")
         },
         () => {
-          alert(`${this.state.winGame}`);
-          this.resetGame();
+          Alert.alert(`${this.state.winGame}`, "", [
+            {
+              text: "Reset",
+              onPress: () => this.resetGame()
+            }
+          ]);
         }
       );
     } else if (
@@ -98,8 +107,12 @@ export default class App extends Component
           winGame: (itemArray[0] ? "Cross" : "Circle").concat(" Wins")
         },
         () => {
-          alert(`${this.state.winGame}`);
-          this.resetGame();
+          Alert.alert(`${this.state.winGame}`, "", [
+            {
+              text: "Reset",
+              onPress: () => this.resetGame()
+            }
+          ]);
         }
       );
     } else if (
@@ -112,8 +125,12 @@ export default class App extends Component
           winGame: (itemArray[1] ? "Cross" : "Circle").concat(" Wins")
         },
         () => {
-          alert(`${this.state.winGame}`);
-          this.resetGame();
+          Alert.alert(`${this.state.winGame}`, "", [
+            {
+              text: "Reset",
+              onPress: () => this.resetGame()
+            }
+          ]);
         }
       );
     } else if (
@@ -126,8 +143,12 @@ export default class App extends Component
           winGame: (itemArray[2] ? "Cross" : "Circle").concat(" Wins")
         },
         () => {
-          alert(`${this.state.winGame}`);
-          this.resetGame();
+          Alert.alert(`${this.state.winGame}`, "", [
+            {
+              text: "Reset",
+              onPress: () => this.resetGame()
+            }
+          ]);
         }
       );
     } else if (
@@ -140,8 +161,12 @@ export default class App extends Component
           winGame: (itemArray[0] ? "Cross" : "Circle").concat(" Wins")
         },
         () => {
-          alert(`${this.state.winGame}`);
-          this.resetGame();
+          Alert.alert(`${this.state.winGame}`, "", [
+            {
+              text: "Reset",
+              onPress: () => this.resetGame()
+            }
+          ]);
         }
       );
     } else if (
@@ -149,9 +174,19 @@ export default class App extends Component
       itemArray[2] == itemArray[4] &&
       itemArray[4] == itemArray[6]
     ) {
-      this.setState({
-        winGame: (itemArray[2] ? "Cross" : "Circle").concat(" Wins")
-      }, () => { alert(`${this.state.winGame}`); this.resetGame();})
+      this.setState(
+        {
+          winGame: (itemArray[2] ? "Cross" : "Circle").concat(" Wins")
+        },
+        () => {
+          Alert.alert(`${this.state.winGame}`, "", [
+            {
+              text: "Reset",
+              onPress: () => this.resetGame()
+            }
+          ]);
+        }
+      );
     }
 
     };
